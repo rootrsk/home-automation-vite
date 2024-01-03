@@ -1,0 +1,38 @@
+
+.sidebar-backdrop{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #161515a1;
+    .sidebar{
+        // position: absolute;
+    
+        background: #262d47;
+        color: #fff;
+        height: 100%;
+        max-width: 280px;
+        li{
+            padding: 10px;
+            // background: #02693e;
+            // margin-bottom: 10px;
+            list-style-type: none;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            span{
+                margin-left: 10px;
+                // font-weight: 700;
+            }
+            &:hover{
+                background: #000;
+            }
+        }
+    }
+}
+.hide{
+    display: none;
+}
