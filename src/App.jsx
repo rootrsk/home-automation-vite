@@ -27,7 +27,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomeRoutes />} index={true} />
+          {/* <Route path="/" element={<HomeRoutes />} index={true} /> */}
           <Route path="/app/*" element={<ApplicationRoutes />} />
         </Routes>
       </BrowserRouter>
