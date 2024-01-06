@@ -1,5 +1,5 @@
 import axios from "axios"
-const BASE_URL = "http://mammoth-galvanized-fiber.glitch.me"
+const BASE_URL = "https://mammoth-galvanized-fiber.glitch.me"
 
 const API = async ({ url, data, params, method = "get" }) => {
     try {
