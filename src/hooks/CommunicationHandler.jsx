@@ -35,7 +35,7 @@ function CommunicationHandler() {
         
     }, [socket]);
     socket?.on('sensor-sent',(data)=>{
-        console.log(data)
+        // console.log(data)
         dispatch(setSensorData(data))
     })
     useEffect(()=>{

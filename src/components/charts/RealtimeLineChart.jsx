@@ -1,7 +1,8 @@
 import React from "react";
 import Chart from "react-apexcharts";
 // eslint-disable-next-line 
-export default (props) => {
+//ddfdf
+const X =  (props) => {
     const options = {
         chart: {
             id: 'realtime',
@@ -157,3 +158,5 @@ export default (props) => {
   };
   return <Chart type="line" options={options} series={props.dataList} height={360} />;
 };
+
+export default X

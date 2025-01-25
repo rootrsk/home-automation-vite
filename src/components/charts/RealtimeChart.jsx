@@ -5,10 +5,7 @@ const TIME_RANGE_IN_MILLISECONDS = 15 * 1000;
 const ADDING_DATA_INTERVAL_IN_MILLISECONDS = 1000;
 
 // eslint-disable-next-line 
-import React from 'react'
-
-function RealtimeChart() {
-  (props) => {
+const  RealtimeChart = (props) => {
     const nameList = ["a"];
     const defaultDataList = nameList.map(name => ({
       name: name,
@@ -51,7 +48,6 @@ function RealtimeChart() {
         />
       </div>
     );
-  };
 }
 
 export default RealtimeChart

@@ -1,4 +1,33 @@
-$font-stack: Helvetica,
-sans-serif;
-$primary-color: #3a456d;
-$secondary-color: #262D47;
+// Typography
+$font-stack: Helvetica, sans-serif;
+$heading-font: 'Source Code Pro', monospace;
+
+// Primary Colors
+$primary-color: #3a456d; // Main app color
+$primary-light: #5a6eaa; // Lighter shade for hover or accents
+$primary-dark: #2a344d; // Darker shade for contrast
+
+// Secondary Colors
+$secondary-color: #262D47; // Sidebar or secondary elements
+$secondary-light: #3c4164; // Lighter shade for highlights
+$secondary-dark: #1b2134; // Darker shade for strong contrasts
+
+// Accent Colors
+$accent-color: #FF6F61; // Buttons and call-to-action elements
+$accent-light: #FF8A7C; // Hover effects
+$accent-dark: #E65A50; // Pressed or active states
+
+// Neutral Colors
+$neutral-light: #F5F5F5; // Backgrounds or light accents
+$neutral-gray: #C4C4C4; // Borders and subtle elements
+$neutral-dark: #7D7D7D; // Text or muted elements
+
+// Shadows and Effects
+$shadow-color: rgba(0, 0, 0, 0.2); // Box shadows
+$shadow-dark: rgba(0, 0, 0, 0.4); // For deeper shadows
+
+// Utility Colors
+$success-color: #28a745; // Success messages or indicators
+$warning-color: #ffc107; // Warnings or alerts
+$error-color: #dc3545; // Error messages
+$info-color: #17a2b8; // Informational messages

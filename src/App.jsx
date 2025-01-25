@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { userProfile } from 'api/user/user';
 import { authenticateUser } from 'store/authSlice';
 import ApplicationRoutes from 'routes/ApplicationRoutes';
+import NotFound from './pages/home/NotFound';
 
 function App() {
   const dispatch = useDispatch()
@@ -27,8 +28,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<HomeRoutes />} index={true} /> */}
+          <Route path="/" element={<HomeRoutes />} index={true} />
           <Route path="/app/*" element={<ApplicationRoutes />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>

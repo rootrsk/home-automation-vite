@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Login from 'pages/home/Login'
 import Switches from 'pages/application/Switches'
 import Header from 'components/user/Header'
+import Remote from '../pages/application/Remote'
 
 function ApplicationRoutes() {
     const socket = useSelector(state=>state.socket.socket)
@@ -13,7 +14,7 @@ function ApplicationRoutes() {
     const dispatch = useDispatch()
     
     useEffect(()=>{
-        if(socket?.connected){
+    if(socket?.connected){
             if(auth.isAuthenticated){
                 socket.emit("join",{token:auth.token})
             }
@@ -28,6 +29,7 @@ function ApplicationRoutes() {
                 <Routes>
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/switches" element={<Switches />} />
+                    <Route path="/remote" element={<Remote />} />
                 </Routes>
             </main>
         </div>
