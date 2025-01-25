@@ -26,6 +26,16 @@ function CommunicationHandler() {
                 dispatch(setArduinoButtonStatus({switch_no:idx+1, status}))
             })
         })
+        socket.on("playback-info",({info})=>{
+            
+            let parsedInfo = {}
+            info.trim().split('\n').forEach(line=>{
+                const [key, ...valueParts] = line.split(/\s{2,}/);
+                parsedInfo[key.split(":")[key.split(":").length -1]] = valueParts[0]
+                console.log(key.split(':'),valueParts[0])
+            })
+        })
+        
         socket.on("sync",(data)=>{
             console.log(data)
             // switch_status?.forEach((status,idx)=>{

@@ -12,11 +12,7 @@ function Remote(props) {
             socket.emit("trigger-remote-keys",{key,username:auth?.user?.username})
         }
     }
-    const colorHandler = ({color}) => {
-        if(socket){
-            socket.emit("strip-color-change",{color})
-        }
-    }
+
     const keys = {
         "left": "◀",
         "right": "▶",

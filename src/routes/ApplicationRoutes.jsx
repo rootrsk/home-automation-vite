@@ -7,6 +7,8 @@ import Login from 'pages/home/Login'
 import Switches from 'pages/application/Switches'
 import Header from 'components/user/Header'
 import Remote from '../pages/application/Remote'
+import Keyboard from '../pages/application/Keyboard'
+import Search from '../pages/application/Search'
 
 function ApplicationRoutes() {
     const socket = useSelector(state=>state.socket.socket)
@@ -30,6 +32,8 @@ function ApplicationRoutes() {
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/switches" element={<Switches />} />
                     <Route path="/remote" element={<Remote />} />
+                    <Route path="/keyboard" element={<Keyboard />} />
+                    <Route path="/search" element={<Search />} />
                 </Routes>
             </main>
         </div>

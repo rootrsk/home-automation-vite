@@ -1,0 +1,133 @@
+/* keyboardpage.scss */
+
+/* Full keyboard container */
+.keyboard-container {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // padding: 20px;
+    // box-sizing: border-box;
+
+}
+
+/* Title */
+.keyboard-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Keyboard layout */
+.keyboard-layout {
+    display: grid;
+    grid-template-columns: repeat(auto, 1fr);
+    // /* Default to 16 columns */
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    // max-width: 800px;
+    /* Limit max width for large screens */
+}
+
+/* Row container for keys */
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Individual key styles */
+.keyboard-key {
+    padding: 12px;
+    border: 2px solid #888;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Larger keys (like Shift, Ctrl, etc.) */
+.large-key {
+    grid-column: span 2;
+    /* Span 2 columns */
+}
+
+/* Highlight the pressed key */
+.keyboard-key.pressed {
+    background-color: #4e8cff;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effects for keys */
+.keyboard-key:hover {
+    background-color: #d1d1d1;
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+/* Key labels */
+.keyboard-key span {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Pressed key label at the bottom */
+.pressed-key-display {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #4e8cff;
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    .keyboard-layout {
+        grid-template-columns: repeat(auto, 1fr);
+        /* Reduce to 12 columns */
+    }
+
+    .keyboard-key {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .keyboard-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+    .keyboard-layout {
+        grid-template-columns: repeat(auto, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        /* Reduce to 8 columns */
+    }
+
+    .keyboard-key {
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .keyboard-title {
+        font-size: 1rem;
+    }
+}
